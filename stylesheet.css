@@ -122,7 +122,7 @@ li a:hover {
 
 /* Entry Styling */
 .entry {
-    background: #f9f9f9;
+    background: powderblue;
     border-left: 5px solid #0078D4;  /* Alaska Airlines color */
     margin-bottom: 30px;
     padding: 20px;
@@ -176,8 +176,8 @@ h1 {
     width: 90%;
     height: 500px;
     margin: 30px auto;
-    position: relative;          /* Fix disappearing issue */
-    overflow: hidden;            /* Ensures content doesn't move off-screen */
+    position: relative;
+    overflow: hidden;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
 }
