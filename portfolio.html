@@ -3,19 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My Projects</title>
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
-    <div class = "navbar" id = "topNavBar">
-        <ul id = "homeNavBar">
-            <li><a href="index.html" class = "navBarElement">Home</a></li>
-            <li><a href="aboutMe.html" class = "navBarElement">About Me</a></li>
-            <li><a href="exp.html" class = "navBarElement">Experience</a></li>
-            <li><a href="portfolio.html" class = "active navBarElement">Projects</a></li>
+
+<header>
+    <div class="navbar" id="topNavBar">
+        <ul id="homeNavBar">
+            <li><a href="index.html" class="navBarElement">Home</a></li>
+            <li><a href="aboutMe.html" class="navBarElement">About Me</a></li>
+            <li><a href="exp.html" class="navBarElement">Experience</a></li>
+            <li><a href="portfolio.html" class="active navBarElement">Projects</a></li>
         </ul>
     </div>
-    
-    <script src="script.js"></script>
+</header>
+
+<main>
+    <h1>My Projects</h1>
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+
+            <!-- Project 1 -->
+            <div class="swiper-slide">
+                <img src="assets/photos/boardgames.jpg" alt="Project Holmes">   
+                <div class="project-info">
+                    <h2>Project Holmes</h2>
+                    <p>A text-based game in which you play as a detective and must gather clues on missing people without being caught. Written in Python.</p>
+                    <a href="https://github.com/EvieCutrell/Holmes" target="_blank">View Project's GitHub Page.</a>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="swiper-slide">
+                <img src="assets/photos/books.jpg" alt="Project 2">
+                <div class="project-info">
+                    <h2>Project Two</h2>
+                    <p>A webpage that retrieves data from NASA's Picture of the Day API and scales the image and info in a reactive environment.</p>
+                    <a href="https://github.com/EvieCutrell/nasa-react-app">View Project</a>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="swiper-slide">
+                <img src="assets/photos/warhammer.jpg" alt="Project 3">
+                <div class="project-info">
+                    <h2>Project Three</h2>
+                    <p>Data analysis dashboard showcasing operational metrics.</p>
+                    <a href="https://github.com/EvieCutrell/JokesWebApp">View Project</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Navigation buttons -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+</main>
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- Correctly initialized Swiper -->
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const swiper = new Swiper('.swiper-container', {
+            loop: true,                      // Enable continuous loop
+            slidesPerView: 1,                // Show one project at a time
+            spaceBetween: 30,                // Spacing between slides
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev'
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+            autoplay: {
+                delay: 3000,                  // Auto-scroll every 3 seconds
+                disableOnInteraction: false
+            }
+        });
+    });
+</script>
+
 </body>
 </html>
